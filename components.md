@@ -98,7 +98,7 @@ Rel(conference_service, db, "INSERT/SELECT/UPDATE", "SQL")
 @startuml
 
 class User {
-  uuid
+  id
   email
   first_name
   last_name
@@ -107,18 +107,19 @@ class User {
 }
 
 class Report {
-  uuid
+  id
   title
   annotation
   text
   creation_date
   update_date
   moderation_flag
-  conference_uuid
+  user_id
+  conference_id
 }
 
 class Conference {
-  uuid
+  id
   title
   date
 }
